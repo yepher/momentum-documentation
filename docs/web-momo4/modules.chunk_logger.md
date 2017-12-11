@@ -22,30 +22,31 @@ The chunk_logger is configured through a configuration file using a stanza such 
 chunk_logger chunk_logger1
 {
   timestamp_format = "%m:%d:%H:%M:%S"
-  destination = "/path/to/log/file"
+  destination = "/var/log/ecelerity/chunk_logger"
   add_newline = "true"
 }
 ```
 
-In this example, the log file is written to `/path/to/log/file` and the `timestamp_format` specifies the timestamp in a **strftime()** format. In addition, **add_newline** enables you to specify whether a new line is added automatically to every item of data that is logged. It defaults to `true`.
+In this example, the log file is written to `/var/log/ecelerity/chunk_logger` and the `timestamp_format` specifies the timestamp in a **strftime()** format. In addition, **add_newline** enables you to specify whether a new line is added automatically to every item of data that is logged. It defaults to `true`.
 
-The module is in the `msys.beta.chunk_logger_int` namespace:
+The module is in the `msys.chunk_logger_int` namespace:
 
 `msys.beta.chunk_logger_int.log("Hello World!")`
+
 ### 71.15.2. Lua Interface
 
-The module `msys.ts.chunk_logger` and the function `msys.ts.chunk_logger.log()` provides the Lua interface, as shown by the following example.:
+The module `msys.chunk_logger_int` and the function `msys.msys.chunk_logger_int.log()` provides the Lua interface, as shown by the following example.:
 
 <a name="example.chunk_logger.lua_interface"></a>
 
 **Example 71.25. Lua Interface**
 
 ```
-require("msys.beta.chunk_logger_int")
+local chunk = require("msys.chunk_logger_int")
 
 ...
 
-msys.beta.chunk_logger_int.log()
+chunk.log("Hello World!!!")
 ```
 
 ### 71.15.3. C Interface

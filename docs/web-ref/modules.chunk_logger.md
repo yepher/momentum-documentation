@@ -51,18 +51,18 @@ The module is in the `msys.beta.chunk_logger_int` namespace:
 `msys.beta.chunk_logger_int.log("Hello World!")`
 ### 14.15.2. Lua Interface
 
-The module `msys.ts.chunk_logger` and the function `msys.ts.chunk_logger.log()` provides the Lua interface, as shown by the following example:
+The module `msys.chunk_logger` and the function `msys.chunk_logger.log()` provides the Lua interface, as shown by the following example:
 
 <a name="example.chunk_logger.lua_interface"></a>
 
 **Example 14.25. Lua Interface**
 
 ```
-require("msys.beta.chunk_logger_int")
+local chunk = require("msys.chunk_logger_int");
 
 ...
 
-msys.beta.chunk_logger_int.log()
+chunk.log("hello world")
 ```
 
 ### 14.15.3. C Interface
