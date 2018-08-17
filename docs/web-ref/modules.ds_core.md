@@ -478,7 +478,7 @@ This command outputs statistics relating to the connection cache.
 
 This command removes all entries from the connection cache.
 
-**14.30.3.6. CSV**<a class="indexterm" name="idp19740272"></a>
+**14.30.3.6. CSV** <a class="indexterm" name="idp19740272"></a>
 
 The CSV driver provides access to any comma-separated file. This driver is installed by default. The following code includes the CSV driver and defines the properties of the CSV cache.
 

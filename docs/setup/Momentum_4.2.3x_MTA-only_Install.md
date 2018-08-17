@@ -21,6 +21,8 @@ _Ported from [Momentum_4.2.31.1_MTA-only_installation.pdf](https://support.messa
 
 ## Introduction
 
+Before following this procedure you should follow [Momentum Setup CentOS7 Prep](Momentum_Setup_CentOS7_Prep.md) first.
+
 A full-featured version installation of Momentum 4.x has several components that are ancillary to the core MTA functionality. The Cassandra and Vertica databases require separate drive partitions and significantly impact performance if the supporting hardware is not appropriately sized to support
 them.
 
