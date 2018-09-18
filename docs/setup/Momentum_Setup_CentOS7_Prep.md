@@ -9,9 +9,14 @@ For each machine that will run Momentum send an email with the out put of the fo
 
 ## System Up to Date
 
-Make sure all the systems that will run Momentum is up to date.
+Make sure all the systems that will run Momentum is up to date and running ntpd.
 
-`yum update -y`
+```
+yum -y install groupinstall base sysstat ntp gdb lsof.x86_64 wget yum-utils vim cyrus-sasl-devel
+yum update -y
+chkconfig ntpd on
+```
+
 
 
 ## Stop Conflicting Services
